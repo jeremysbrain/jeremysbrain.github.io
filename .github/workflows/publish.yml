@@ -2,7 +2,7 @@ name: Publish
 
 on:
   schedule:
-    - cron: '08 21 * * *'
+    - cron: '25 03 * * *'
 
 jobs:
   refresh:
@@ -10,6 +10,6 @@ jobs:
     steps:
       - name: Trigger GH Pages Build
         run: |
-          gh api https://api.github.com/repos/{owner}/{repo}/pages/builds --method POST
+          gh api https://api.github.com/repos/jeremysbrain/jeremysbrain.github.io/pages/builds --method POST
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
